@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primaryColor: '#1E1E1E';
+  --secondaryColor: '#101010';
+}
+
+@layer base {
+  body {
+    @apply bg-black text-white;
+  }
+}
+
+.mobile_navbar {
+  transform: translateX(0px) !important;
+  transition: 0.5s all ease !important;
+}
+
+@layer components {
+  .navbar {
+    background: linear-gradient(90.25deg, #000000 0.94%, #1a1a1a 99.03%);
+  }
+  .nav-link {
+    @apply py-10 text-md font-semibold;
+  }
+}
+
+.pink-tape {
+  background-image: url('../assets/images/CollectWalletButton.svg');
+  width: 486px;
+  padding: 13px 0px;
+  display: flex;
+  align-items: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.pink-tape-navbar {
+  background-image: url('../assets/images/navButton.svg');
+  width: 210px;
+  padding: 13px 0px;
+  display: flex;
+  align-items: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@media screen and (max-width: 515px) {
+  .pink-tape {
+    width: 300px;
+    padding: 13px 0px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .pink-tape {
+    width: 250px;
+    padding: 13px 0px;
+  }
+}
+.token-balance-enter,
+.token-balance-leave-active {
+  opacity: 0;
+  transition: opacity 1s;
+}
