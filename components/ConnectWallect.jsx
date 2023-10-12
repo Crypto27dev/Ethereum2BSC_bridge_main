@@ -122,7 +122,7 @@ const ConnectWallect = () => {
         );
         const tx = await squidgrow.approve(
           oftWrapSquidGrowBSC,
-          ethers.utils.parseUnits(inputValue.toString(), bscDecimals)
+          ethers.utils.parseUnits(inputValue.toString(), bscDecimals) 
         );
         customWiteToast(tx, "Approving", bscChainId);
         await tx.wait();
